@@ -23,3 +23,35 @@ body {
   flex-direction: column;
   align-items: center;
 }
+
+.inputForm {
+  display: flex;
+  margin: 0 auto;
+  width: 500px;
+  align-items: flex-end;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}
+
+.ok {
+  width: 90px;
+  height: 40px;
+  cursor: pointer;
+  font-size: 1rem;
+  background-color: #fff;
+}
+
+label {
+  display: block;
+  margin-right: 10px;
+  width: 180px;
+  text-align: start;
+}
+
+.inputPlace {
+  margin-top: 10px;
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  font-size: 1.2rem;
+}
