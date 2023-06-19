@@ -1,6 +1,6 @@
-import { IProps } from '../models/index';
+import { IProps1 } from '../models/index';
 
-export default function InputForm({ name, setName, timeZone, setTimeZone, handleClick }: IProps) {
+export default function InputForm({ name, setName, timeZone, setTimeZone, handleClick }: IProps1) {
 
   return (
     <form className='inputForm'>

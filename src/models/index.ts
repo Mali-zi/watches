@@ -1,17 +1,19 @@
-export interface IExercise {
+export interface IWatch {
   id: number,
-  date: string, 
-  distance: string
+  name: string, 
+  timeZone: number,
 }
-
-export interface IProps {
+export interface IProps1 {
   name: string, 
   setName: (val: string) => void, 
   timeZone: number, 
   setTimeZone: (val: number) => void, 
-  handleClick: () => void
+  handleClick: () => void,
 };
-
+export interface IProps2 {
+  watches: IWatch[], 
+  setWatches: (val: IWatch[]) => void,
+};
 export interface ButtonProps {
   handleDelete: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
 }
