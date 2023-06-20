@@ -1,6 +1,10 @@
 import { IProps3 } from '../models/index';
 
-export default function Clock({ time, timeZone }: IProps3) {
+/** 
+ * Компонент Clock рисует циферблат часов и три стрелки для часов, минут и секунд.
+ * В качестве props принимает текущее время и timeZone - смещение от UTC/GMT.
+ */
+export default function Clock({ time, timeZone }: IProps3): React.ReactElement {
   let hours = time.getUTCHours() + timeZone;
   let minutes = time.getUTCMinutes();
   let seconds = time.getUTCSeconds();

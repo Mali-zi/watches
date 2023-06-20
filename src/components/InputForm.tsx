@@ -1,6 +1,11 @@
 import { IProps1 } from '../models/index';
 
-export default function InputForm({ name, setName, timeZone, setTimeZone, handleClick }: IProps1) {
+/** 
+ * Компонент InputForm отрисовывает форму для ввода названия города и смещения 
+ * в часах относительно Гринвича. По нажатию кнопки часы с соответствующими данными 
+ * отображаются на экране.
+ */
+export default function InputForm({ name, setName, timeZone, setTimeZone, handleClick }: IProps1): React.ReactElement {
 
   return (
     <form className='inputForm'>

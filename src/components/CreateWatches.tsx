@@ -2,8 +2,12 @@ import ButtonDelete from './ButtonDelete';
 import Clock from './Clock';
 import { IProps2 } from '../models/index';
 
-export default function CreateWatches({watches, setWatches, time}: IProps2) {
-
+/** 
+ * Компонент CreateWatches выводит список часов с данными, введенными пользователем.
+ * В качестве props принимает переменные состояния: watches и setWatches, а также 
+ * переменную состояния time.
+ */
+export default function CreateWatches({watches, setWatches, time}: IProps2): React.ReactElement{
 
   let watchesList: JSX.Element[] = [<></>];
   if (watches) {
