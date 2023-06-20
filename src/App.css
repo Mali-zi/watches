@@ -111,32 +111,49 @@ label {
   position: relative;
   height: 100px;
   width: 100px;
-  margin-bottom: 0.5rem;
   background-color: white;
   border-radius: 50%;
   border: black 1px solid;
 }
 
+.centerCircle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  left: calc(50% - 3px);
+  top: calc(50% - 3px);
+  background-color: black;
+  border-radius: 50%;
+}
+
 .hours, .minutes, .seconds {
   position: absolute;
-  width: 5px;
-  height: 30px;
-  left: calc(50% - 2.5px);
-  top: 25px;
   background-color: black;
   border-radius: 2.5px;
-  transform-origin: center calc(100% - 2px);
+  transform-origin: bottom center;
+}
+
+.hours {
+  width: 4px;
+  height: 32px;
+  left: calc(50% - 2px);
+  top: 17px;
+  background-color: black;
+  border-radius: 2.5px;
+  transform-origin: bottom center;
 }
 
 .minutes {
-  height: 45px;
+  height: 42px;
   width: 3px;
-  top: 10px;
+  left: calc(50% - 1.5px);
+  top: calc(50% - 42px);
 }
 
 .seconds {
-  height: 50px;
+  height: 48px;
   width: 1px;
-  top: 5px;
+  left: calc(50% - 0.5px);
+  top: calc(50% - 48px);
   background-color: red;
 }

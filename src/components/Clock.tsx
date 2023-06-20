@@ -11,6 +11,7 @@ export default function Clock({ time, timeZone }: IProps3): React.ReactElement {
   
   return (
     <div className='clock'>
+
       <div 
         className='hours'
         style={{
@@ -29,6 +30,8 @@ export default function Clock({ time, timeZone }: IProps3): React.ReactElement {
           transform: `rotateZ(${seconds * 6}deg)`,
         }}
       />
+
+      <div className='centerCircle' />
 
     </div>
   )

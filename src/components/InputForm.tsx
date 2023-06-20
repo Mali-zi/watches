@@ -22,6 +22,8 @@ export default function InputForm({ name, setName, timeZone, setTimeZone, handle
       <input 
         id='timeZone'
         type='number'
+        min='-12'
+        max='12'
         className='inputPlace'
         defaultValue={0}
         value={timeZone} 
