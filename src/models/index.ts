@@ -13,7 +13,12 @@ export interface IProps1 {
 export interface IProps2 {
   watches: IWatch[], 
   setWatches: (val: IWatch[]) => void,
+  time: Date,
 };
 export interface ButtonProps {
   handleDelete: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
+}
+export interface IProps3 {
+  time: Date;
+  timeZone: number, 
 }

@@ -56,13 +56,10 @@ label {
 }
 
 .mainList {
-  display: flex;
   position: relative;
   transition: 0.4s;
   min-height: 1.5rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  cursor: pointer;
+  margin: 1rem 2rem;
 }
 
 .watchPlace {
@@ -70,10 +67,6 @@ label {
   height: auto;
   text-align: center;
 }
-/* 
-.datePlace {
-  text-align: left;
-} */
 
 .btns {
   width: 100%;
@@ -89,6 +82,7 @@ label {
   cursor: pointer;
   background-color: #fff;
   margin-left: 10px;
+  cursor: pointer;
 }
 
 .icon {
@@ -97,27 +91,52 @@ label {
   text-align: center;
 }
 
-/* .titleStore {
-  display: flex;
-  padding: 30px 20px ;
-  width: 500px;
-  align-items: flex-end;
-  justify-content: space-between;
-  font-size: 0.9rem;
-} */
-
 .watchesStore {
-  display: flex;
-  width: 500px;
   margin-bottom: 30px;
-  flex-direction: column;
   font-size: 1rem;
-  border-width: 2px;
-  border-style: solid;
+  border: none;
   padding: 20px 0;
 }
 
 .mylist {
+  display: flex;
+  width: 900px;
   padding: 0;
   margin: 5px 20px;
+  list-style: none;
+  justify-content: center;
+}
+
+.clock {
+  position: relative;
+  height: 100px;
+  width: 100px;
+  margin-bottom: 0.5rem;
+  background-color: white;
+  border-radius: 50%;
+  border: black 1px solid;
+}
+
+.hours, .minutes, .seconds {
+  position: absolute;
+  width: 5px;
+  height: 30px;
+  left: calc(50% - 2.5px);
+  top: 25px;
+  background-color: black;
+  border-radius: 2.5px;
+  transform-origin: center calc(100% - 2px);
+}
+
+.minutes {
+  height: 45px;
+  width: 3px;
+  top: 10px;
+}
+
+.seconds {
+  height: 50px;
+  width: 1px;
+  top: 5px;
+  background-color: red;
 }

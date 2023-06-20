@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import InputForm from './components/InputForm';
 import CreateWatches from './components/CreateWatches';
@@ -8,9 +8,19 @@ function App() {
   const [name, setName] = useState<string>('');
   const [timeZone, setTimeZone] = useState<number>(0);
   const [watches, setWatches] = useState<IWatch[]>([]);
+  const [time, setTime] = useState(() => new Date());
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const now = new Date()
+      setTime(now)
+    }, 1000);
+
+    return () => clearInterval(interval)
+  }, []);
 
   function handleClick() {
-    if (name && timeZone) {
+    if (name) {
       let nextList = [
           ...watches,
           {
@@ -42,6 +52,7 @@ function App() {
       <CreateWatches 
         watches={watches}
         setWatches={setWatches}
+        time={time}
       />
       </div>
     </div>

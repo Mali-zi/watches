@@ -1,7 +1,9 @@
 import ButtonDelete from './ButtonDelete';
+import Clock from './Clock';
 import { IProps2 } from '../models/index';
 
-export default function CreateWatches({watches, setWatches}: IProps2) {
+export default function CreateWatches({watches, setWatches, time}: IProps2) {
+
 
   let watchesList: JSX.Element[] = [<></>];
   if (watches) {
@@ -24,6 +26,10 @@ export default function CreateWatches({watches, setWatches}: IProps2) {
               }}
             />
           </div>
+          <Clock 
+            time={time}
+            timeZone={watch.timeZone}
+          />
         </li>
       )
     });
